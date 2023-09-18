@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    padding-left: 3rem;
+    padding-top: 3rem;
+}
+
+.main-image{
+    width: 450px;
+    height: 450px;
+    margin-bottom: 2rem;
+}
+
+.main-image img{
+    width: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.main-image .show{
+    display: block;
+}
+.thumbnails{
+    display: flex;
+}
+
+.thumbnail{
+    margin-right: 1rem;
+    cursor: pointer;
+}

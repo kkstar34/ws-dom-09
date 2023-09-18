@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ws dom</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="box">
+
+        <div class="main-image">
+            <img src="images/image-product-1.jpg" alt="" class="img-1 show" >
+
+            <img src="images/image-product-2.jpg" alt="" class="img-2">
+
+            <img src="images/image-product-3.jpg" alt="" class="img-3" >
+
+            <img src="images/image-product-4.jpg" alt="" class="img-4">
+
+        </div>
+
+        <div class="thumbnails">
+            <div class="thumbnail" id="1">
+                <img src="images/image-product-1-thumbnail.jpg" alt="" >
+            </div>
+            <div class="thumbnail" id="2">
+                <img src="images/image-product-2-thumbnail.jpg" alt="">
+            </div>
+            <div class="thumbnail" id="3">
+                <img src="images/image-product-3-thumbnail.jpg" alt="">
+            </div>
+            <div class="thumbnail" id="4">
+                <img src="images/image-product-4-thumbnail.jpg" alt="">
+            </div>
+        </div>
+
+    </div>
+    
+
+    <script>
+
+
+        let thumbnails = document.querySelectorAll('.thumbnail');
+
+        for (let i = 0; i < thumbnails.length; i++){
+            thumbnails[i].addEventListener('click', swhitchImage);
+        }
+
+
+        function swhitchImage(){
+            let imgs = document.querySelectorAll('.main-image img');
+
+            for (let i = 0; i < imgs.length; i++){
+                imgs[i].classList.remove('show');
+            }
+
+            let img = document.querySelector('.img-' + this.id);
+            img.classList.add('show');
+        }
+    </script>
+</body>
+</html>
